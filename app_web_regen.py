@@ -21,7 +21,7 @@ from openai import OpenAI
 # -----------------------------
 APP_DIR = os.path.dirname(os.path.abspath(__file__))       # ...\rag
 PROJECTS_DIR = os.path.dirname(APP_DIR)                    # ...\CLOUD
-ENV_PATH = os.path.join(PROJECTS_DIR, ".env")
+#ENV_PATH = os.path.join(PROJECTS_DIR, ".env")
 
 ORIGIN_DIR = os.path.join(APP_DIR, "origin")
 EMB_DIR = os.path.join(APP_DIR, "embedding")
@@ -311,4 +311,5 @@ if ask:
     except Exception as e:
         st.error(f"처리 실패: {type(e).__name__}: {e}")
         st.info("429 (insufficient_quota)이면 OpenAI 결제/쿼터 문제입니다.")
+
 
