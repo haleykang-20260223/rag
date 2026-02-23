@@ -4,7 +4,7 @@ import shutil
 import pandas as pd
 import numpy as np
 import streamlit as st
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from openai import OpenAI
 
 # =========================================================
@@ -34,7 +34,7 @@ EMBED_MODEL = "text-embedding-3-small"
 CHAT_MODEL = "gpt-4o-mini"
 
 # .env 로드
-load_dotenv(ENV_PATH)
+#load_dotenv(ENV_PATH)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
     raise ValueError("OPENAI_API_KEY가 Projects 폴더의 .env 파일에 설정되어 있지 않습니다.")
@@ -311,3 +311,4 @@ if ask:
     except Exception as e:
         st.error(f"처리 실패: {type(e).__name__}: {e}")
         st.info("429 (insufficient_quota)이면 OpenAI 결제/쿼터 문제입니다.")
+
